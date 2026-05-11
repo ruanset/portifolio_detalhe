@@ -1,0 +1,150 @@
+/* CONFIGURAÇÕES GERAIS */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    /* Transição suave para cores de fundo e texto ao trocar tema (Sugestão 5) */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* MODO ESCURO */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* MENU FIXO NO TOPO*/
+header {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    position: fixed; /* Mantém o menu visível em todas as seções */
+    width: 100%;
+    top: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+body.dark-mode header {
+    background-color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+nav ul li { 
+    margin: 0 15px; 
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* Destaque visual da página atual */
+nav ul li a.ativo {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+
+/* Botão no modo claro */
+#btn-tema {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 2000; /* Garante que fique acima do menu e conteúdo */
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid #2c3e50;
+    background-color: #ffffff;
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+
+body.dark-mode #btn-tema {
+    background-color: #34495e; /* Fica escuro */
+    color: #ffffff;            /* Texto fica branco */
+    border-color: #ffffff;      /* Borda fica branca */
+}
+
+#btn-tema:hover {
+    transform: scale(1.05);
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    margin-top: 100px; /* Evita que o conteúdo fique sob o menu fixo */
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* ESTILIZAÇÃO DO LINK DE PORTFÓLIO */
+.link-botao {
+    display: inline-block;
+    background-color: #2c3e50;
+    color: white !important;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.link-botao:hover {
+    background-color: #34495e;
+}
+
+/* FORMULÁRIO DE CONTATO */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    background: rgba(0,0,0,0.05);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+body.dark-mode form { 
+    background: rgba(255,255,255,0.05); 
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botão de Envio do Formulário */
+button[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #2ecc71;
+}
